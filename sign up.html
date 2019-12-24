@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign Up</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style>
+body {
+	margin:0;
+	padding:0;
+	width:100%;
+	color:#959595;
+	font:normal 12px/1.8em Arial, Helvetica, sans-serif;
+}
+html, .main {
+	padding:0;
+	margin:0;
+	background-color:#f0f0f0;
+}
+.clr {
+	clear:both;
+	padding:0;
+	margin:0;
+	width:100%;
+	font-size:0;
+	line-height:0;
+}
+.logo {
+	padding:15px 0 0 40px;
+	float:left;
+	width:auto;
+}
+h1 {
+	margin:0;
+	padding:16px 0;
+	color:#b6b4b4;
+	font:bold 38px/1.2em Arial, Helvetica, sans-serif;
+	letter-spacing:-2px;
+}
+h1 a, h1 a:hover {
+	color:#b6b4b4;
+	text-decoration:none;
+}
+h1 span {
+	color:#00b3ea;
+}
+h1 small {
+	display:block;
+	padding:0;
+	font:normal 14px/1.2em Arial, Helvetica, sans-serif;
+	letter-spacing:normal;
+}
+h2 {
+	font:normal 24px Arial, Helvetica, sans-serif;
+	padding:8px 0;
+	margin:8px 0;
+	color:#323a3f;
+}
+p {
+	margin:8px 0;
+	padding:0 0 8px 0;
+	font:normal 12px/1.8em Arial, Helvetica, sans-serif;
+}
+a {
+	color:#00b3ea;
+	text-decoration:underline;
+}
+.header, .content, .menu_nav, .fbg, .footer, form, ol, ol li, ul, .content .mainbar, .content .sidebar {
+	margin:0;
+	padding:0;
+}
+.header_resize {
+	margin:0 auto;
+	padding:0;
+	width:970px;
+}
+.hbg {
+	background:url(images/image.jpg) no-repeat center 20px;
+	height:191px;
+}
+.menu_nav {
+	margin:0;
+	padding:0;
+	float:right;
+}
+.menu_nav ul {
+	list-style:none;
+	padding-right:40px;
+}
+.menu_nav ul li {
+	margin:0;
+	padding:0 2px 0 0;
+	float:left;
+	background:no-repeat right center;
+}
+.menu_nav ul li a {
+	display:block;
+	margin:0;
+	padding:30px 16px;
+	color:#959595;
+	text-decoration:none;
+	font-size:13px;
+	text-transform:uppercase;
+}
+.menu_nav ul li.active a, .menu_nav ul li a:hover {
+	color:#00b3ea;
+}
+
+ul.sb_menu, ul.ex_menu {
+	margin:0;
+	padding:0;
+	list-style:none;
+	color:#959595;
+}
+ul.sb_menu li, ul.ex_menu li {
+	margin:0;
+}
+ul.sb_menu li {
+	padding:4px 0 4px 12px;
+	width:220px;
+}
+ul.ex_menu li {
+	padding:4px 0 8px 12px;
+}
+ul.sb_menu li a, ul.ex_menu li a {
+	color:#5f5f5f;
+	text-decoration:none;
+	margin-left:-12px;
+	padding-left:12px;
+}
+ul.sb_menu li a:hover, ul.ex_menu li a:hover {
+	color:#00b3ea;
+	font-weight:bold;
+}
+ul.sb_menu li a:hover {
+	text-decoration:underline;
+}
+ul.ex_menu li a:hover {
+	text-decoration:none;
+}
+.fbg_resize {
+	margin:0 auto;
+	padding:40px;
+	padding-top: 100px;
+	width:890px;
+}
+.fbg img {
+	padding:4px;
+	border:1px solid #cfd2d4;
+	background-color:#fff;
+}
+.fbg .col {
+	margin:0;
+	float:left;
+}
+.fbg .c1 {
+	padding:0 16px 0 0;
+	width:376px;
+}
+.fbg .c2 {
+	padding:0 16px;
+	width:190px;
+}
+.fbg .c3 {
+	padding:0 0 0 16px;
+	width:260px;
+}
+.fbg .c1 img {
+	margin:8px 16px 4px 0;
+	float:left;
+}
+.footer_resize {
+	margin:0 auto;
+	padding:24px 40px;
+	width:890px;
+}
+.footer p {
+	margin:0;
+	padding:4px 0;
+	line-height:normal;
+}
+.footer a {
+	color:#959595;
+	padding:inherit;
+	text-decoration:underline;
+}
+.footer a:hover {
+	text-decoration:none;
+}
+.footer .lf {
+	float:left;
+}
+.footer .rf {
+	float:right;
+}
+ol {
+	list-style:none;
+}
+ol li {
+	display:block;
+	clear:both;
+}
+ol li label {
+	display:block;
+	margin:0;
+	padding:16px 0 0 0;
+}
+ol li input.text {
+	width:480px;
+	border:1px solid #c0c0c0;
+	margin:2px 0;
+	padding:5px 2px;
+	height:16px;
+	background:#fff;
+}
+ol li textarea {
+	width:480px;
+	border:1px solid #c0c0c0;
+	margin:2px 0;
+	padding:2px;
+	background:#fff;
+}
+ol li .send {
+	margin:16px 0 0 0;
+    height: 25px;
+}
+.header, .hbg, .content, .fbg, .footer {
+	padding-top:20px;
+}
+.header_resize, .content_resize, .fbg_resize, .footer_resize {
+	background-color:#fff;
+}
+.readmore_resize{
+	margin:0 auto;
+	padding: 20px;
+	width:950px;
+	text-align: right;
+}
+.readmore_resize a{
+	text-decoration: none;
+	font-size: 15px;
+	padding: 6px;
+	color: #000;
+}
+
+.kolm{
+  margin-top: 1000px;
+}
+.loginbox{
+            width: 430px;
+            height: 800px;
+            background: rgba(0, 0, 0, .6);
+            color: #ffffff;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            box-sizing: border-box;
+            box-shadow: rgba(0, 0, 0, .5);
+            padding: 70px;
+            border-radius: 10px;
+            opacity: 90%;
+            margin-top: 250px;
+        }
+        h1{
+            margin: 0;
+            padding: 0px 0px 20px;
+            text-align: center;
+            font-size: 22px;
+        }
+        .gmbr{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            top: -50px;
+            left:calc(36%);
+        }
+        .loginbox input[type="text"]{
+            border: none;
+            border-bottom: 1px solid #ffffff;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: #ffffff;
+            font-size: 18px;
+            align-content: center;
+        }
+        .loginbox  input[type="password"]{
+            border: none;
+            border-bottom: 1px solid #ffffff;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: #ffffff;
+            font-size: 18px; 
+        }
+        .loginbox input[type="submit"]{
+            border: none;
+            outline: none;
+            height: 40px;
+            background: #fb2525;
+            color: #ffffff;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 25px;
+            margin-left: 20px;
+            margin-top: 45px;
+            width: 250px;
+            margin-bottom: 80px;
+        }
+        .loginbox input[type="submit"]:hover{
+            background: honeydew;
+            color: #fb2525;
+            width: 250px;
+            border-radius: 25px;
+        }
+        
+        .loginbox a{
+            text-decoration: none;
+            font-size: 12px;
+            line-height:20px;
+            padding-top: 10px;
+            padding-right: 5px;
+            color: darkgrey;
+        }
+        .middle{
+            overflow: hidden;
+        }
+        .btn{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: #f2f2f2;
+            margin: 10px;
+            border-radius: 30%;
+            box-shadow: 0 5px 15px -5px #00000070;
+            color: #3498db;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .btn i{
+            line-height: 90px;
+            transition: 0.2s linear;
+        }
+        .btn i img{
+            margin-top: -5px;
+            margin-bottom: 70px;
+            margin-left: 2px;
+            width: 30px;
+            height: 30px;
+            align-content: center;
+        }
+        .btn:hover i{
+            transform: scale(1.3);
+            color: #f2f2f2;
+
+        }
+        .btn::before{
+            content: "";
+            position: absolute;
+            width: 120%;
+            height: 120%;
+            background: #1439db;
+            opacity: 70%;
+            transform: rotate(45deg);
+            left: -110%;
+            top: 90%;
+        }
+        .btn:hover::before{
+            animation: aaa 0.7s 1;
+            top: -10%;
+            left: -10%;
+            
+        }
+        @keyframes aaa {
+          0%{
+            left: -110%;
+            top: 90%;
+          }50%{
+            left: 10%;
+            top: -30%;
+          }100%{
+            top: -10%;
+            left: -10%;
+          }
+          }
+
+</style>
+</head>
+<body>
+<!-- START PAGE SOURCE -->
+<!-- Header -->
+<div class="main">
+  <div class="header">
+    <div class="header_resize">
+      <div class="logo">
+        <h1><a href="index.html"><span>The</span>WWW <small>The We Web World</small></a></h1>
+      </div>
+      <div class="menu_nav">
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="abaout.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="active"><a href="sign up.html">Sign Up</a></li>
+            <li><a href="Login.html">log In</a></li>
+        </ul>
+      </div>
+      <div class="clr"></div>
+    </div>
+</div>
+<!-- Akhir Header -->
+
+<!-- Servicces -->
+<div class="kolm">
+	<div class="loginbox">
+		<img class="gmbr" src="/assets/image/dekorasi/icon.jpg" alt="">
+        <h1>sign up</h1>
+        <p>Email</p>
+        <input type="text" name=" " placeholder="Enter Email">
+        <p>Whatsapp</p>
+        <input type="text" name=" " placeholder="Number Phone">
+        <p>Validation Code</p>
+		<input type="text" name=" " placeholder="Validation Code">
+		<p>User Name</p>
+		<input type="text" name=" " placeholder="Enter Username">
+		<p>Pasword</p>
+		<input type="password" name=" " placeholder="Enter password">
+		<br>
+		<input type="submit" name=" " value="CREATE">
+		<br> 
+        <div class="middle">
+            <a class="btn" href="#">
+                <i><img src="/assets/image/sosial media/facebook.png" alt=""></i>
+              </a>
+              <a class="btn" href="#">
+                <i><img src="/assets/image/sosial media/whatsapp.png" alt=""></i>
+              </a>
+              <a class="btn" href="#">
+                <i><img src="/assets/image/sosial media/instagram.png" alt=""></i>
+              </a>
+              <a class="btn" href="#">
+                <i><img src="/assets/image/sosial media/twitter.png" alt=""></i>
+              </a>
+              <a class="btn" href="#">
+                <i><img src="/assets/image/sosial media/youtube.png" alt=""></i>
+              </a>
+          </div>         
+	</div>
+		</div>
+  </div>
+<div class="clr"></div>
+
+  <div class="fbg">
+    <div class="fbg_resize">
+      <div class="col c1">
+        <h2><span>About</span></h2>
+        <img src="LG.PNG" width="56" height="56" alt="" />
+        <p>TWWW merupakan Sebuah Platform terbaru yang bergerak di bidang penyedia jasa pembuatan web design untuk semua kalangan,maupun penyedia template wedsite yang cukuo lengkap. <a href="#">Learn more...</a></p>
+      </div>
+      <div class="col c2">
+        <h2><span>Populer Template</span></h2>
+        <ul class="sb_menu">
+          <li><a href="#">Base cupy</a></li>
+          <li><a href="#">semtory</a></li>
+          <li><a href="#">kompany</a></li>
+          <li><a href="#">profile site</a></li>
+          <li><a href="#">Studently</a></li>
+        </ul>
+      </div>
+      <div class="col c3">
+        <h2>Contact</h2>
+        <p>Jangan ragu ayo mulai pesan dan berlangganan.</p>
+        <p><a href="#">Paijo_salto@ymail.com</a></p>
+        <p>+1 (123) 444-5677<br />
+          +1 (123) 444-5678</p>
+        <p>Purworejo</p>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer_resize">
+      <p class="lf">Copyright &copy; 2010 <a href="#">TheWWW</a> - All Rights Reserved</p>
+      <div class="clr"></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
